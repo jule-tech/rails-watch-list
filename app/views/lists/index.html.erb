@@ -1,9 +1,17 @@
-<h1>Lists</h1>
-<ul>
+<div class= "banner" style ="background-image: url(<%= asset_url('Kino.jpg')%>)">
+  <div class="container text-center">
+      <h1>Movie lists</h1>
+    </div>
+  </div>
+
+<div class= "container">
   <% @lists.each do |list| %>
-    <li>
+    <div class="card">
+    <div class="text-center">
       <h4><%= list.name %> | <%= link_to 'Show list', list_path(list) %></h4>
-    </li>
+    </div>
+    </div>
   <% end %>
-</ul>
+</div>
+
 <%= link_to "Create a new list", new_list_path(@list), class: "btn btn-primary"%>
